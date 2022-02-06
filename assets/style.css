@@ -79,6 +79,30 @@ a:active {
     padding:40px;
 }
 
+.nav-right-container {
+    position: relative;
+}
+
+.cart-count {
+    background: var(--primary-orange-color);
+    width: 15px;
+    height: 10px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    padding: 10px 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: .8rem;
+    
+}
+
+
 .avatar-icon {
     width: 50px;
 }
@@ -98,6 +122,7 @@ a:active {
 
 .container {
     margin: 0 80px;
+    margin-bottom: 5rem;
 }
 
 .product {
@@ -129,10 +154,6 @@ a:active {
     margin-left: 8rem;
 }
 
-/* .product-img-list-item {
-    
-} */
-
 .product-thumbnail {
     width: 80px;
     border-radius: 8px;
@@ -141,11 +162,8 @@ a:active {
 }
 
 .thumbnail-active {
-    border: 3px solid var(--primary-orange-color);   
-}
-
-.opacity-50 {
-    opacity: 75%;
+    border: 3px solid var(--primary-orange-color);
+    opacity: 80%;
 }
 
 .product-count-container {
@@ -154,6 +172,7 @@ a:active {
     background: var(--light-gray-color);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    justify-content: space-between;
 }
 
 .product-buttons-container {
@@ -281,7 +300,6 @@ a:active {
     .product-count-container {
         margin-bottom: 1rem;
         width: 100%;
-        justify-content: center;
     }
     .product-btn {
         width: 100%;
@@ -360,16 +378,20 @@ a:active {
     }
     .container {
         margin: 0 auto;
+        position: relative;
+        z-index: -10;
     }
     .main-img{
         width: 100vw;
         border-radius: 0;
         height: 75vh;
+        margin-top: 6px;
     }
     .product-details {
         padding-left: 25px;
         padding-right: 25px;
-        text-align:left
+        text-align:left;
+        margin-bottom: 5rem;
     }
     .product-details-h2 {
         font-size: 25px;
@@ -407,12 +429,21 @@ a:active {
     .product-img-main {
         width: 100%;
         margin-top: -120px;
+        z-index: -10;
     }
     .arrow-left:active, .arrow-right:active {
         transform: scale(0.99);
         /* Scaling button to 0.98 to its original size */
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
         /* Lowering the shadow */
+    }
+    .product {
+        position: absolute;
+        z-index: -10;
+    }
+    .product-img-container {
+        position: relative;
+        z-index: -10;
     }
 }
 
@@ -450,13 +481,6 @@ a:active {
     .product-details-h1 {
         font-size: 2rem;
     }
-}
-
-
-
-
-footer {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+   
 }
 
