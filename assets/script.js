@@ -60,7 +60,6 @@ const checkCart = (count) => {
     }else {
         cart.style.display = 'none';
     }
-
 }
 
 const getAvatar = () => {
@@ -80,28 +79,6 @@ const subtractItemAmount = () => {
 const addToCart = () => {
     checkCart(db.count)
 }
-
-
-
-// const setThumbnail = (thumbnail) => {
-//     let imgDictionary = {
-//         '/images/image-product-1-thumbnail.jpg':'/images/image-product-1.jpg',
-//         '/images/image-product-2-thumbnail.jpg':'/images/image-product-2.jpg',
-//         '/images/image-product-3-thumbnail.jpg':'/images/image-product-3.jpg',
-//         '/images/image-product-4-thumbnail.jpg':'/images/image-product-4.jpg',
-//     };
-//     const src = thumbnail.getAttribute('src');
-//     const mainProduct = document.querySelector('.main-img');
-//     mainProduct.setAttribute("src", imgDictionary[src]);
-//     const thumbnailList = thumbnail.parentNode.parentNode.children;
-//     for (let i=0; i < thumbnailList.length; i++){
-//         let el = thumbnailList[i].children[0];
-//         if(el.classList.contains('thumbnail-active')){
-//             el.classList.remove('thumbnail-active')
-//         }
-//     }
-//     thumbnail.classList.add('thumbnail-active')
-// }
 
 const setThumbnail = (thumbnail) => {
     let imgDictionary = {
@@ -123,31 +100,10 @@ const setThumbnail = (thumbnail) => {
     thumbnail.classList.add('thumbnail-active')
 }
 
-const arrowLeft = () => {
-    const mainProduct = document.querySelector('.main-img');
-    console.log(mainProduct)
-    
-}
 let iterate = 1;
-
+let images = []
 
 const arrowFunction = (arrow) => {
-    console.log('arrow:' , arrow.id)
-   
-    let images = []
-    // let imgDictionary = {
-    //     '/images/image-product-1-thumbnail.jpg':'/images/image-product-1.jpg',
-    //     '/images/image-product-2-thumbnail.jpg':'/images/image-product-2.jpg',
-    //     '/images/image-product-3-thumbnail.jpg':'/images/image-product-3.jpg',
-    //     '/images/image-product-4-thumbnail.jpg':'/images/image-product-4.jpg',
-    // };
-
-    // let imgList = [
-    //     '/images/image-product-1.jpg', 
-    //     '/images/image-product-2.jpg',
-    //     '/images/image-product-3.jpg',
-    //     '/images/image-product-4.jpg'
-    // ]
 
     images[0] = '/images/image-product-1.jpg';
     images[1] = '/images/image-product-2.jpg';
@@ -156,29 +112,28 @@ const arrowFunction = (arrow) => {
 
 
     const mainProduct = document.querySelector('.main-img');
-    // let src = mainProduct.getAttribute('src');
     mainProduct.setAttribute("src", images[iterate]);
     if(arrow.id == 'right'){
         if (iterate < images.length - 1){
-            console.log('rigth-', iterate++)
-            console.log('rigth:', images[iterate])
+            iterate++;
         }else {
-            iterate = 0
+            iterate = 0;
         }
     }
 
-    // if(arrow.id == 'left'){
-    //     if (iterate < 0){
-    //         console.log('left-', iterate--)
-    //     }else {
-    //         iterate = 4
-    //     }
-    // }
+    if(arrow.id == 'left'){
+        if (iterate <= 0){
+            iterate = 3;  
+            console.log(iterate)
+        }else {
+            iterate--;
+        }
+    }
+
+  
 
 
-   
-    
-console.log(images)
+
     
 }
 
