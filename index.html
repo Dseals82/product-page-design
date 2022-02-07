@@ -36,7 +36,7 @@
           </li>
         </ul>
         <div class="nav-right-container">
-          <div class="cart-count"><span class="cart-count-int">3</span></div>
+          <div class="cart-count"><span class="cart-count-int"></span></div>
           <img onclick="getCart()" class="cart-icon" src="/images/icon-cart.svg" alt="">
           
           <div class="nav-avatar">
@@ -51,13 +51,13 @@
       <div class="product-img-container">
         <div class="product-img-main">
           <div class="product-arrow-container">
-            <div onclick="arrowLeft()" class="arrow-left"><img src="/images/icon-previous.svg" alt=""></div>
-            <div onclick="arrowRight()" class="arrow-right"><img src="/images/icon-next.svg" alt=""></div>
+            <div id="left" onclick="arrowFunction(this)" class="arrow-left"><img src="/images/icon-previous.svg" alt=""></div>
+            <div id="right" onclick="arrowFunction(this)" class="arrow-right"><img src="/images/icon-next.svg" alt=""></div>
           </div>
           <img src="/images/image-product-1.jpg" alt="" class="main-img">
         </div>
         <div class="product-img-list">
-          <div class="product-img-list-item">
+          <!-- <div class="product-img-list-item">
             <img onclick="setThumbnail(this)" src="/images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-1 thumbnail-active">
           </div>
           <div class="product-img-list-item">
@@ -68,7 +68,7 @@
           </div>
           <div class="product-img-list-item">
             <img onclick="setThumbnail(this)" src="/images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-4">
-          </div>
+          </div> -->
         </div>
       </div> <!--Image Container ends here-->
       <div class="product-details">
