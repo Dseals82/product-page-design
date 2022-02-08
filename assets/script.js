@@ -45,7 +45,11 @@ const displayThumbnails = (database) => {
 displayThumbnails(db);
 
 const toggleHamburger = () => {
-    console.log("hamburger")
+    document.querySelector('#open').classList.toggle('display-none')
+    document.querySelector('#close').classList.toggle('display-none')
+    document.querySelector('.navbar').classList.toggle('navbar-aside')
+    document.querySelector('.navbar-list').classList.toggle('navbar-list-aside')
+    
 }
 
 const getCart = () => {

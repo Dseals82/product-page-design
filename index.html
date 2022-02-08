@@ -14,8 +14,9 @@
   <div class="header-container">
     <header class="header">
       <nav class="navbar">
-        <div class="logo">
-          <img onclick="toggleHamburger()" class="hamburger" src="/images/icon-menu.svg" alt="">
+        <div onclick="toggleHamburger()" class="logo">
+          <img id="close"  class="hamburger display-none" src="/images/icon-close.svg" alt="">
+          <img id="open"  class="hamburger" src="/images/icon-menu.svg" alt="">
           <a href="#"><img src="/images/logo.svg" alt="Sneakers Logo"></a>
         </div>
         <ul class="navbar-list">
@@ -46,59 +47,62 @@
       </nav>
     </header>
   </div>
-  <div class="container">  
-    <section class="product">
-      <div class="product-img-container">
-        <div class="product-img-main">
-          <div class="product-arrow-container">
-            <div id="left" onclick="arrowFunction(this)" class="arrow-left"><img src="/images/icon-previous.svg" alt=""></div>
-            <div id="right" onclick="arrowFunction(this)" class="arrow-right"><img src="/images/icon-next.svg" alt=""></div>
+  <div class="dark-opacity">
+    <div class="container">  
+      <section class="product">
+        <div class="product-img-container">
+          <div class="product-img-main">
+            <div class="product-arrow-container">
+              <div id="left" onclick="arrowFunction(this)" class="arrow-left"><img src="/images/icon-previous.svg" alt=""></div>
+              <div id="right" onclick="arrowFunction(this)" class="arrow-right"><img src="/images/icon-next.svg" alt=""></div>
+            </div>
+            <img src="/images/image-product-1.jpg" alt="" class="main-img">
           </div>
-          <img src="/images/image-product-1.jpg" alt="" class="main-img">
+          <div class="product-img-list">
+            <!-- <div class="product-img-list-item">
+              <img onclick="setThumbnail(this)" src="/images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-1 thumbnail-active">
+            </div>
+            <div class="product-img-list-item">
+              <img onclick="setThumbnail(this)" src="/images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-2">
+            </div>
+            <div class="product-img-list-item">
+              <img onclick="setThumbnail(this)" src="/images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-3">
+            </div>
+            <div class="product-img-list-item">
+              <img onclick="setThumbnail(this)" src="/images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-4">
+            </div> -->
+          </div>
+        </div> <!--Image Container ends here-->
+        <div class="product-details">
+          <h2 class="product-details-h2">Sneaker Company</h2>
+          <h1 class="product-details-h1">Fall Limited Edition Sneakers</h1>
+          <p class="product-details-p">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+          <div class="price-container-mobile">
+            <div class="price-container">
+              <span class="price">$125.00</span>
+              <span class="price-discount"> 50%</span>
+            </div>
+            <p class="price-before-discount">$250.00</p>
+          </div>
+          
+          <div class="product-buttons-container">
+            <div class="product-count-container">
+              <img onclick="subtractItemAmount()" class="product-count-img-subtract" src="/images/icon-minus.svg" alt="">
+              <p class="product-count-amount">0</p>
+              <img onclick="addItemAmount()" class="product-count-img-add" src="/images/icon-plus.svg" alt="">
+            </div>
+            <button onclick="addToCart()" class="product-btn"><i class="fas fa-shopping-cart cart-icon-btn"></i> Add to Cart</button>
+          </div>
+    
         </div>
-        <div class="product-img-list">
-          <!-- <div class="product-img-list-item">
-            <img onclick="setThumbnail(this)" src="/images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-1 thumbnail-active">
-          </div>
-          <div class="product-img-list-item">
-            <img onclick="setThumbnail(this)" src="/images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-2">
-          </div>
-          <div class="product-img-list-item">
-            <img onclick="setThumbnail(this)" src="/images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-3">
-          </div>
-          <div class="product-img-list-item">
-            <img onclick="setThumbnail(this)" src="/images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail thumbnail-4">
-          </div> -->
-        </div>
-      </div> <!--Image Container ends here-->
-      <div class="product-details">
-        <h2 class="product-details-h2">Sneaker Company</h2>
-        <h1 class="product-details-h1">Fall Limited Edition Sneakers</h1>
-        <p class="product-details-p">
-          These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.
-        </p>
-        <div class="price-container-mobile">
-          <div class="price-container">
-            <span class="price">$125.00</span>
-            <span class="price-discount"> 50%</span>
-          </div>
-          <p class="price-before-discount">$250.00</p>
-        </div>
-        
-        <div class="product-buttons-container">
-          <div class="product-count-container">
-            <img onclick="subtractItemAmount()" class="product-count-img-subtract" src="/images/icon-minus.svg" alt="">
-            <p class="product-count-amount">0</p>
-            <img onclick="addItemAmount()" class="product-count-img-add" src="/images/icon-plus.svg" alt="">
-          </div>
-          <button onclick="addToCart()" class="product-btn"><i class="fas fa-shopping-cart cart-icon-btn"></i> Add to Cart</button>
-        </div>
-  
-      </div>
-    </section>
-  
-  </div> <!--End of main container-->
+      </section>
+    
+    </div> <!--End of main container-->
+  </div>
+ 
   
   <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

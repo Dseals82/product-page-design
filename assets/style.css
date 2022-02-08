@@ -356,6 +356,34 @@ a:active {
     .product-img-list-item {
         margin-bottom: 0.2rem;
     }
+
+    .navbar-aside {
+        position: relative;
+    }
+    
+
+    .navbar-list-aside {
+        position: absolute;
+        top: 99px;
+        left: 0px;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        align-items: flex-start;
+        height: 1000px;
+        transform: translateX(0);
+    }
+
+    .navbar-item {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        font-weight: bolder;
+    }
+
+    .display-none {
+        display: none;
+    }
     
 }
 
